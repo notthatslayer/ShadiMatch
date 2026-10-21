@@ -1,128 +1,178 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#e91e63">
-  <title>ShaadiMatch | Find Your Forever</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e91e63">
+<title>ShaadiMatch - Find Your Forever</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="announcement">A meaningful connection starts with a little hello. <a href="#register">Create your free profile</a></div>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="ShaadiMatch home"><span class="brand-mark">S</span><span>Shaadi<span class="brand-pink">Match</span><small>MEET YOUR FOREVER</small></span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-    <nav id="mainNav">
-      <a href="#home" class="nav-link active">Home</a>
-      <a href="#matches" class="nav-link">Discover</a>
-      <a href="#success" class="nav-link">Success Stories</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#contact" class="nav-link">Contact</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
-      <button class="btn btn-outline nav-login" data-open-login>Log in</button>
-      <a class="btn btn-primary nav-join" href="#register">Join free</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <span class="eyebrow"><span class="eyebrow-line"></span> YOUR STORY. YOUR WAY.</span>
-        <h1>Somewhere, your<br><em>forever</em> is waiting.</h1>
-        <p>Meet people who share your values, your dreams, and the little things that make life beautiful.</p>
-        <div class="hero-actions"><a class="btn btn-primary btn-large" href="#register">Create your profile <span>↗</span></a><a class="text-link" href="#matches">Explore profiles <span>→</span></a></div>
-        <div class="trust-row"><div class="avatar-stack"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=faces" alt=""><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=faces" alt=""><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=80&h=80&fit=crop&crop=faces" alt=""></div><div><strong>25,000+ hopeful hearts</strong><small>finding their person, every day</small></div></div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-photo-main"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1000&h=1200&fit=crop" alt="A couple celebrating their wedding"></div>
-        <div class="floating-note note-top"><span class="note-icon">♡</span><div><strong>Made for each other</strong><small>Real stories, real connection</small></div></div>
-        <div class="floating-note note-bottom"><div class="mini-avatars"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=faces" alt=""><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=faces" alt=""></div><div><strong>It's a match!</strong><small>Values aligned. Hearts open.</small></div></div>
-        <span class="decor decor-one">✳</span><span class="decor decor-two">✧</span>
-      </div>
-    </section>
-
-    <section class="quick-search" aria-label="Quick profile search">
-      <div class="search-heading"><span class="search-symbol">⌕</span><div><h2>Start your search</h2><p>A few details can lead to a beautiful beginning.</p></div></div>
-      <form id="quickSearch" class="search-fields">
-        <label>I'm looking for<select id="quickGender"><option value="Woman">A bride</option><option value="Man">A groom</option><option value="">Anyone</option></select></label>
-        <label>Age between<div class="age-inputs"><select id="quickMinAge"><option>23</option><option>21</option><option>25</option><option>28</option><option>30</option></select><span>to</span><select id="quickMaxAge"><option>32</option><option>28</option><option>35</option><option>40</option></select></div></label>
-        <label>Religion<select id="quickReligion"><option value="">Any religion</option><option>Hindu</option><option>Muslim</option><option>Christian</option><option>Sikh</option><option>Jain</option></select></label>
-        <label>Location<select id="quickLocation"><option value="">Anywhere</option><option>Mumbai</option><option>Pune</option><option>Delhi</option><option>Bengaluru</option><option>Hyderabad</option></select></label>
-        <button class="btn btn-primary search-submit" type="submit">Find matches <span>→</span></button>
-      </form>
-    </section>
-
-    <section class="section matches-section" id="matches">
-      <div class="section-top"><div><span class="eyebrow">THOUGHTFULLY SELECTED</span><h2>People worth <em>knowing.</em></h2><p>Explore genuine profiles and discover what makes each person unique.</p></div><a href="#allProfiles" class="text-link">View all profiles <span>→</span></a></div>
-      <div class="filter-bar">
-        <div class="filter-search"><span>⌕</span><input id="profileSearch" type="search" placeholder="Search by name, city or profession"></div>
-        <select id="religionFilter" aria-label="Filter by religion"><option value="">All religions</option><option>Hindu</option><option>Muslim</option><option>Christian</option><option>Sikh</option><option>Jain</option></select>
-        <select id="educationFilter" aria-label="Filter by education"><option value="">All education</option><option>Masters</option><option>Bachelors</option><option>Doctorate</option></select>
-        <select id="locationFilter" aria-label="Filter by location"><option value="">All locations</option><option>Mumbai</option><option>Pune</option><option>Delhi</option><option>Bengaluru</option><option>Hyderabad</option></select>
-        <button id="viewToggle" class="view-toggle" title="Toggle list or grid view" aria-label="Toggle list or grid view">☷</button>
-      </div>
-      <div class="profile-grid" id="profileGrid"></div>
-      <div class="empty-state hidden" id="emptyState"><span>♡</span><h3>No profiles found</h3><p>Try changing your search or filters.</p><button class="btn btn-outline" id="resetFilters">Reset filters</button></div>
-      <div class="center-action"><button class="btn btn-outline" id="showMore">Show more profiles <span>↓</span></button></div>
-    </section>
-
-    <section class="values-band">
-      <div class="values-intro"><span class="eyebrow">A BETTER WAY TO CONNECT</span><h2>Built around what<br><em>really matters.</em></h2></div>
-      <div class="value-item"><span class="value-icon">♡</span><h3>Meaningful matches</h3><p>Discover people through shared values, interests, and life goals.</p></div>
-      <div class="value-item"><span class="value-icon">⌑</span><h3>Your privacy first</h3><p>You choose what to share and when to start a conversation.</p></div>
-      <div class="value-item"><span class="value-icon">✧</span><h3>Quality over quantity</h3><p>Thoughtful profiles help you get to know the person beyond a photo.</p></div>
-    </section>
-
-    <section class="section success-section" id="success">
-      <div class="section-top"><div><span class="eyebrow">LOVE, IN THEIR OWN WORDS</span><h2>And then, they found <em>each other.</em></h2><p>Every lasting relationship begins with a first conversation.</p></div><div class="story-arrows"><button id="storyPrev" aria-label="Previous story">←</button><button id="storyNext" aria-label="Next story">→</button></div></div>
-      <div class="stories-grid" id="storiesGrid"></div>
-    </section>
-
-    <section class="register-section" id="register">
-      <div class="register-copy"><span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span><h2>Let your story<br><em>find its person.</em></h2><p>Create your profile in a few simple steps. It's free to join, and your next chapter could start with one hello.</p><div class="register-perks"><span>✓ Free profile creation</span><span>✓ Personalised match discovery</span><span>✓ You stay in control</span></div></div>
-      <div class="register-card"><div class="form-progress"><span id="stepLabel">STEP 1 OF 3</span><div class="progress-track"><span id="progressFill"></span></div></div><h3 id="registerTitle">Let's start with you.</h3><p id="registerSubtitle">Tell us a little about yourself.</p>
-        <form id="registerForm">
-          <div class="form-step active" data-step="1">
-            <label>Full name<input name="name" required placeholder="Your full name"></label>
-            <div class="two-fields"><label>I am<select name="gender" required><option value="">Select</option><option>Woman</option><option>Man</option><option>Non-binary</option></select></label><label>Date of birth<input name="dob" type="date" required></label></div>
-            <label>Email address<input name="email" type="email" required placeholder="you@example.com"></label>
-          </div>
-          <div class="form-step" data-step="2">
-            <div class="two-fields"><label>Religion<select name="religion" required><option value="">Select religion</option><option>Hindu</option><option>Muslim</option><option>Christian</option><option>Sikh</option><option>Jain</option><option>Other</option></select></label><label>Marital status<select name="marital" required><option value="">Select</option><option>Never married</option><option>Divorced</option><option>Widowed</option></select></label></div>
-            <label>Highest education<select name="education" required><option value="">Select education</option><option>Bachelors</option><option>Masters</option><option>Doctorate</option><option>Diploma</option><option>Other</option></select></label>
-            <label>Current city<input name="city" required placeholder="e.g. Mumbai"></label>
-          </div>
-          <div class="form-step" data-step="3">
-            <label>Occupation<input name="occupation" required placeholder="What do you do?"></label>
-            <label>Partner age preference<div class="two-fields"><input name="ageMin" type="number" min="18" max="100" value="24" required aria-label="Minimum partner age"><input name="ageMax" type="number" min="18" max="100" value="32" required aria-label="Maximum partner age"></div></label>
-            <label class="check-label"><input type="checkbox" required> I agree to the demo terms and privacy notice.</label>
-          </div>
-          <div class="form-error" id="formError" role="alert"></div>
-          <div class="form-actions"><button class="btn btn-outline hidden" id="prevStep" type="button">Back</button><button class="btn btn-primary" id="nextStep" type="button">Continue <span>→</span></button><button class="btn btn-primary hidden" id="submitRegistration" type="submit">Create my profile <span>→</span></button></div>
-          <small class="form-note">Frontend demo only. Please don't enter sensitive personal information.</small>
-        </form>
-      </div>
-    </section>
-
-    <section class="section about-section" id="about">
-      <div class="about-image"><img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=900&h=1000&fit=crop" alt="A couple walking together in a garden"><span class="image-caption">Love is personal. Finding it should be, too.</span></div>
-      <div class="about-copy"><span class="eyebrow">A LITTLE ABOUT US</span><h2>Less swiping.<br>More <em>understanding.</em></h2><p>ShaadiMatch was imagined around a simple belief: finding a life partner deserves care, clarity, and a little more humanity. We bring people together through thoughtful profiles and shared priorities.</p><p>Whether you know exactly what you're looking for or you're just beginning, this is a space to explore at your own pace.</p><a href="#contact" class="text-link">Get to know us <span>→</span></a><div class="stats-row"><div><strong>25k+</strong><small>Member profiles</small></div><div><strong>1,200+</strong><small>Happy beginnings</small></div><div><strong>18+</strong><small>Years and above</small></div></div></div>
-    </section>
-
-    <section class="contact-section" id="contact">
-      <div><span class="eyebrow">WE'RE HERE TO HELP</span><h2>Have a question?<br><em>Let's talk.</em></h2><p>Send us a note and our team will get back to you.</p><div class="contact-detail"><span>✉</span><div><small>Email us</small><strong>hello@shaadimatch.example</strong></div></div><div class="contact-detail"><span>⌖</span><div><small>Our office</small><strong>Mumbai, Maharashtra, India</strong></div></div></div>
-      <form id="contactForm" class="contact-form"><label>Your name<input required name="contactName" placeholder="Full name"></label><label>Email address<input required name="contactEmail" type="email" placeholder="you@example.com"></label><label>How can we help?<textarea required name="message" rows="4" placeholder="Write your message..."></textarea></label><button class="btn btn-primary" type="submit">Send message <span>→</span></button><p class="form-success" id="contactSuccess" role="status"></p></form>
-    </section>
-  </main>
-
-  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">S</span><span>Shaadi<span class="brand-pink">Match</span><small>MEET YOUR FOREVER</small></span></a><p>Thoughtful connections. Beautiful beginnings.</p><div class="footer-links"><a href="#about">About</a><a href="#matches">Discover</a><a href="#contact">Contact</a><a href="#register">Join free</a></div><div class="footer-bottom"><span>© <span id="year"></span> ShaadiMatch. Internship project demo.</span><span>Designed & developed by <strong>Tayyaba Shaikh</strong></span></div></footer>
-
-  <div class="modal-backdrop hidden" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="modalName"><div class="modal-card profile-modal"><button class="modal-close" data-close-modal aria-label="Close dialog">×</button><div id="profileModalContent"></div></div></div>
-  <div class="modal-backdrop hidden" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle"><div class="modal-card login-modal"><button class="modal-close" data-close-modal aria-label="Close dialog">×</button><span class="eyebrow">WELCOME BACK</span><h2 id="loginTitle">Good to see you.</h2><p>Sign in to continue your story.</p><form id="loginForm"><label>Email address<input name="loginEmail" type="email" required placeholder="you@example.com"></label><label>Password<input name="password" type="password" required minlength="4" placeholder="Enter any 4+ characters"></label><button class="btn btn-primary full-width" type="submit">Log in</button><p class="form-success" id="loginMessage" role="status"></p><small>Demo sign-in only. No account or password is stored.</small></form></div></div>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="app.js"></script>
+<div class="announcement">A meaningful connection starts with a little hello. <a href="#register">Create your free profile</a></div>
+<header class="site-header">
+<a class="brand" href="#home" aria-label="ShaadiMatch home">
+<span class="brand-mark">S</span><span>Shaadi<span class="brand-pink">Match</span><small>MEET YOUR FOREVER</small>
+</span>
+</a>
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+<nav id="mainNav">
+<a href="#home" class="nav-link active">Home</a>
+<a href="#matches" class="nav-link">Discover</a>
+<a href="#success" class="nav-link">Success Stories</a>
+<a href="#about" class="nav-link">About</a>
+<a href="#contact" class="nav-link">Contact</a>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+<button class="btn btn-outline nav-login" data-open-login>Log in</button>
+<a class="btn btn-primary nav-join" href="#register">Join free</a>
+</nav>
+</header>
+<main>
+<section class="hero" id="home">
+<div class="hero-content">
+<span class="eyebrow"><span class="eyebrow-line">
+</span> YOUR STORY. YOUR WAY.</span>
+<h1>Somewhere, your<br><em>forever</em> is waiting.</h1>
+<p>Meet people who share your values, your dreams, and the little things that make life beautiful.</p>
+<div class="hero-actions"><a class="btn btn-primary btn-large" href="#register">Create your profile <span>↗</span>
+</a>
+<a class="text-link" href="#matches">Explore profiles <span>→</span></a></div>
+<div class="trust-row">
+<div class="avatar-stack">
+<img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=faces">
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=faces">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=80&h=80&fit=crop&crop=faces">
+</div>
+<div>
+<strong>25,000+ hopeful hearts</strong><small>finding their person, every day</small>
+</div>
+</div>
+</div>
+<div class="hero-visual">
+<div class="hero-photo-main">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1000&h=1200&fit=crop" alt="A couple celebrating their wedding"></div>
+<div class="floating-note note-top">
+<span class="note-icon">♡</span><div><strong>Made for each other</strong><small>Real stories, real connection</small></div></div>
+<div class="floating-note note-bottom">
+<div class="mini-avatars">
+<img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=faces">
+<img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=faces">
+</div><div><strong>It's a match!</strong><small>Values aligned. Hearts open.</small>
+</div>
+</div>
+<span class="decor decor-one">✳</span><span class="decor decor-two">✧</span>
+</div>
+</section>
+<section class="quick-search" aria-label="Quick profile search">
+<div class="search-heading">
+<span class="search-symbol">⌕</span>
+<div>
+<h2>Start your search</h2><p>A few details can lead to a beautiful beginning.</p>
+</div>
+</div>
+<form id="quickSearch" class="search-fields">
+<label>I'm looking for<select id="quickGender"><option value="Woman">A bride</option><option value="Man">A groom</option><option value="">Anyone</option></select></label>
+<label>Age between<div class="age-inputs"><select id="quickMinAge"><option>23</option><option>21</option><option>25</option><option>28</option><option>30</option></select><span>to</span><select id="quickMaxAge"><option>32</option><option>28</option><option>35</option><option>40</option></select></div></label>
+<label>Religion<select id="quickReligion"><option value="">Any religion</option><option>Hindu</option><option>Muslim</option><option>Christian</option><option>Sikh</option><option>Jain</option></select></label>
+<label>Location<select id="quickLocation"><option value="">Anywhere</option><option>Mumbai</option><option>Pune</option><option>Delhi</option><option>Bengaluru</option><option>Hyderabad</option></select></label>
+<button class="btn btn-primary search-submit" type="submit">Find matches <span>→</span></button>
+</form>
+</section>
+<section class="section matches-section" id="matches">
+<div class="section-top"><div><span class="eyebrow">THOUGHTFULLY SELECTED</span><h2>People worth <em>knowing.</em></h2><p>Explore genuine profiles and discover what makes each person unique.</p></div><a href="#allProfiles" class="text-link">View all profiles <span>→</span></a></div>
+<div class="filter-bar">
+<div class="filter-search"><span>⌕</span><input id="profileSearch" type="search" placeholder="Search by name, city or profession"></div>
+<select id="religionFilter" aria-label="Filter by religion"><option value="">All religions</option><option>Hindu</option><option>Muslim</option><option>Christian</option><option>Sikh</option><option>Jain</option></select>
+<select id="educationFilter" aria-label="Filter by education"><option value="">All education</option><option>Masters</option><option>Bachelors</option><option>Doctorate</option></select>
+<select id="locationFilter" aria-label="Filter by location"><option value="">All locations</option><option>Mumbai</option><option>Pune</option><option>Delhi</option><option>Bengaluru</option><option>Hyderabad</option></select>
+<button id="viewToggle" class="view-toggle" title="Toggle list or grid view" aria-label="Toggle list or grid view">☷</button>
+</div>
+<div class="profile-grid" id="profileGrid"></div>
+<div class="empty-state hidden" id="emptyState"><span>♡</span><h3>No profiles found</h3><p>Try changing your search or filters.</p><button class="btn btn-outline" id="resetFilters">Reset filters</button></div>
+<div class="center-action"><button class="btn btn-outline" id="showMore">Show more profiles <span>↓</span></button></div>
+</section>
+<section class="values-band">
+<div class="values-intro"><span class="eyebrow">A BETTER WAY TO CONNECT</span><h2>Built around what<br><em>really matters.</em></h2></div>
+<div class="value-item"><span class="value-icon">♡</span><h3>Meaningful matches</h3><p>Discover people through shared values, interests, and life goals.</p></div>
+<div class="value-item"><span class="value-icon">⌑</span><h3>Your privacy first</h3><p>You choose what to share and when to start a conversation.</p></div>
+<div class="value-item"><span class="value-icon">✧</span><h3>Quality over quantity</h3><p>Thoughtful profiles help you get to know the person beyond a photo.</p></div>
+</section>
+<section class="section success-section" id="success">
+<div class="section-top"><div><span class="eyebrow">LOVE, IN THEIR OWN WORDS</span><h2>And then, they found <em>each other.</em></h2><p>Every lasting relationship begins with a first conversation.</p></div><div class="story-arrows"><button id="storyPrev" aria-label="Previous story">←</button><button id="storyNext" aria-label="Next story">→</button></div></div>
+<div class="stories-grid" id="storiesGrid"></div>
+</section>
+<section class="register-section" id="register">
+<div class="register-copy"><span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span><h2>Let your story<br><em>find its person.</em></h2><p>Create your profile in a few simple steps. It's free to join, and your next chapter could start with one hello.</p><div class="register-perks"><span>✓ Free profile creation</span><span>✓ Personalised match discovery</span><span>✓ You stay in control</span></div></div>
+<div class="register-card"><div class="form-progress"><span id="stepLabel">STEP 1 OF 3</span><div class="progress-track"><span id="progressFill"></span></div></div><h3 id="registerTitle">Let's start with you.</h3><p id="registerSubtitle">Tell us a little about yourself.</p>
+<form id="registerForm">
+<div class="form-step active" data-step="1">
+<label>Full name<input name="name" required placeholder="Your full name"></label>
+<div class="two-fields"><label>I am<select name="gender" required><option value="">Select</option><option>Woman</option><option>Man</option><option>Non-binary</option></select></label><label>Date of birth<input name="dob" type="date" required></label></div>
+<label>Email address<input name="email" type="email" required placeholder="you@example.com"></label>
+</div>
+<div class="form-step" data-step="2">
+<div class="two-fields"><label>Religion<select name="religion" required><option value="">Select religion</option><option>Hindu</option><option>Muslim</option><option>Christian</option><option>Sikh</option><option>Jain</option><option>Other</option></select></label><label>Marital status<select name="marital" required><option value="">Select</option><option>Never married</option><option>Divorced</option><option>Widowed</option></select></label></div>
+<label>Highest education<select name="education" required><option value="">Select education</option><option>Bachelors</option><option>Masters</option><option>Doctorate</option><option>Diploma</option><option>Other</option></select></label>
+<label>Current city<input name="city" required placeholder="e.g. Mumbai"></label>
+</div>
+<div class="form-step" data-step="3">
+<label>Occupation<input name="occupation" required placeholder="What do you do?"></label>
+<label>Partner age preference<div class="two-fields"><input name="ageMin" type="number" min="18" max="100" value="24" required aria-label="Minimum partner age"><input name="ageMax" type="number" min="18" max="100" value="32" required aria-label="Maximum partner age"></div></label>
+<label class="check-label"><input type="checkbox" required> I agree to the demo terms and privacy notice.</label>
+</div>
+<div class="form-error" id="formError" role="alert"></div>
+<div class="form-actions"><button class="btn btn-outline hidden" id="prevStep" type="button">Back</button><button class="btn btn-primary" id="nextStep" type="button">Continue <span>→</span></button><button class="btn btn-primary hidden" id="submitRegistration" type="submit">Create my profile <span>→</span></button></div>
+<small class="form-note">Frontend demo only. Please don't enter sensitive personal information.</small>
+</form>
+</div>
+</section>
+<section class="section about-section" id="about">
+<div class="about-image"><img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=900&h=1000&fit=crop" alt="A couple walking together in a garden"><span class="image-caption">Love is personal. Finding it should be, too.</span></div>
+<div class="about-copy"><span class="eyebrow">A LITTLE ABOUT US</span><h2>Less swiping.<br>More <em>understanding.</em></h2><p>ShaadiMatch was imagined around a simple belief: finding a life partner deserves care, clarity, and a little more humanity. We bring people together through thoughtful profiles and shared priorities.</p><p>Whether you know exactly what you're looking for or you're just beginning, this is a space to explore at your own pace.</p><a href="#contact" class="text-link">Get to know us <span>→</span></a><div class="stats-row"><div><strong>25k+</strong><small>Member profiles</small></div><div><strong>1,200+</strong><small>Happy beginnings</small></div><div><strong>18+</strong><small>Years and above</small></div></div></div>
+</section>
+<section class="contact-section" id="contact">
+<div>
+<span class="eyebrow">WE'RE HERE TO HELP</span>
+<h2>Have a question?<br><em>Let's talk.</em></h2>
+<p>Send us a note and our team will get back to you.</p>
+<div class="contact-detail"><span>✉</span><div><small>Email us</small>
+<strong>test@gmail.com</strong></div></div>
+<div class="contact-detail"><span>⌖</span><div><small>Our office</small><strong>Mumbai, Maharashtra, India</strong>
+</div></div></div>
+<form id="contactForm" class="contact-form"><label>Your name<input required name="contactName" placeholder="Full name"></label><label>Email address<input required name="contactEmail" type="email" placeholder="you@example.com"></label><label>How can we help?<textarea required name="message" rows="4" placeholder="Write your message..."></textarea></label><button class="btn btn-primary" type="submit">Send message <span>→</span></button><p class="form-success" id="contactSuccess" role="status"></p></form>
+</section>
+</main>
+<footer class="site-footer"><a class="brand footer-brand" href="#home">
+<span class="brand-mark">S</span>
+<span>Shaadi<span class="brand-pink">Match</span><small>MEET YOUR FOREVER</small></span></a>
+<p>Thoughtful connections. Beautiful beginnings.</p>
+<div class="footer-links">
+<a href="#about">About</a>
+<a href="#matches">Discover</a>
+<a href="#contact">Contact</a>
+<a href="#register">Join free</a>
+</div>
+<div class="footer-bottom"><span>© <span id="year"></span> ShaadiMatch. Internship project demo.</span>
+<span>Designed & developed by <strong>Tayyaba Shaikh</strong>
+</span>
+</div>
+</footer>
+<div class="modal-backdrop hidden" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="modalName">
+<div class="modal-card profile-modal"><button class="modal-close" data-close-modal aria-label="Close dialog">×</button>
+<div id="profileModalContent"></div></div></div>
+<div class="modal-backdrop hidden" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+<div class="modal-card login-modal"><button class="modal-close" data-close-modal aria-label="Close dialog">×</button>
+<span class="eyebrow">WELCOME BACK</span><h2 id="loginTitle">Good to see you.</h2><p>Sign in to continue your story.</p>
+<form id="loginForm">
+<label>Email address<input name="loginEmail" type="email" required placeholder="test@gmai.com"></label>
+<label>Password<input name="password" type="password" required minlength="4" placeholder="Enter any 4+ characters"></label>
+<button class="btn btn-primary full-width" type="submit">Log in</button><p class="form-success" id="loginMessage" role="status"></p>
+<small>Demo sign-in only. No account or password is stored.</small>
+</form>
+</div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
 </body>
 </html>
